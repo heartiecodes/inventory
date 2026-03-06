@@ -2,7 +2,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "./useAuth";
 import { generateBarcodeValue } from "@/lib/barcode";
-import type { Tables, Enums } from "@/integrations/supabase/types";
+import type { Tables, Enums } from "@/types/supabase";
 
 export type ItemType = Tables<"item_types">;
 export type Item = Tables<"items">;
