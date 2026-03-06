@@ -93,7 +93,7 @@ export default function Settings() {
     if (!user) return;
     setDeleting(true);
     try {
-      const { error } = await supabase.rpc("delete_user");
+      const { error } = await supabase.rpc("delete_user" as any);
       if (error) throw error;
       await signOut();
       toast.success("Account deleted");
